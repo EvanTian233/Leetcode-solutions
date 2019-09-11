@@ -7,6 +7,7 @@ First day in leet code. Starting from array - easy and medium qustions only.
 * #15 Three Sum
 
 ### Learned
+
 * Hash map:
   <br /> Its time complexity is O(1) to find complement since HashMap calculates, not searching, the index based on the key.
     <br /> // Initilization
@@ -15,4 +16,6 @@ First day in leet code. Starting from array - easy and medium qustions only.
     <br /> map.put(target - nums[i], i);
     <br /> // value = map.get(key);   	
     <br /> ans[0] = map.get(nums[i+1]); 		      
-* 
+
+* Array questions:
+  Try use two pointers from the beginning and the bacl like lo and hi.
