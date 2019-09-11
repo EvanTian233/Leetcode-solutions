@@ -8,11 +8,14 @@ First day in leet code. Starting from array - easy and medium qustions only.
 
 ### Learned
 * Hash map:
-  Its time complexity is O(1) to find complement since HashMap calculates, not searching, the index based on the key.
-        // Initilization
-      	HashMap<Integer, Integer> map = new HashMap<>(); 
-    		// map.put(key, value);
-        map.put(target - nums[i], i);
-        // value = map.get(key);
-        ans[0] = map.get(nums[i+1]);
+  <br /> Its time complexity is O(1) to find complement since HashMap calculates, not searching, the index based on the key.
+  <br /> // Initilization
+  <br /> HashMap<Integer, Integer> map = new HashMap<>(); 
+  <br /> // map.put(key, value);
+  <br /> map.put(target - nums[i], i);     
+  <br /> // value = map.get(key);   	
+  <br /> ans[0] = map.get(nums[i+1]); 		
+        
+        
+        
 * 
