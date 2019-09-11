@@ -18,4 +18,4 @@ First day in leet code. Starting from array - easy and medium qustions only.
     <br /> ans[0] = map.get(nums[i+1]); 		      
 
 * Array questions:
-  Try use two pointers from the beginning and the bacl like lo and hi.
+  <br /> Try use two pointers from the beginning and the bacl like lo and hi.
