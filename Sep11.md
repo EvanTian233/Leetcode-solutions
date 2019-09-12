@@ -12,10 +12,11 @@ Second day for array - already found a pattern.
   <br /> Try to swap the desire output to the front of the array and return from there.
 
 * Binary search
-      <html>
+    <html>
       <head>
       </head>
     </html>
+    
       int binarySearch(int nums[], int x) 
       { 
         int lo = 0, hi = nums.length - 1; 
