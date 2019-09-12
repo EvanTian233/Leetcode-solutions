@@ -12,6 +12,8 @@ Second day for array - already found a pattern.
   <br /> Try to swap the desire output to the front of the array and return from there.
 
 * Binary search
+  <br /> Useful with sorted array. 
+  <br /> Cooperate with two pointers.
     <html>
       <head>
       </head>
@@ -20,7 +22,7 @@ Second day for array - already found a pattern.
       int binarySearch(int nums[], int x) 
       { 
         int lo = 0, hi = nums.length - 1; 
-        while (l0 <= hi) { 
+        while (lo <= hi) { 
             int mid =  (hi + lo) / 2; 
             
             // Check if x is present at mid 
