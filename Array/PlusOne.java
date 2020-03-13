@@ -1,3 +1,16 @@
+/*
+
+66. Plus One
+
+https://leetcode.com/problems/plus-one/
+
+Input: [4,3,2,1]
+Output: [4,3,2,2]
+Explanation: The array represents the integer 4321.
+
+*/
+
+
 class PlusOne {
     public int[] plusOne(int[] digits) {
         int n = digits.length;
