@@ -32,6 +32,7 @@ Output:
 
 class InvertTree {
     public TreeNode invertTree(TreeNode root) {
+        // Recursive or DFS
         if (root == null) return null;
 
         TreeNode leftNode = invertTree(root.left);
@@ -41,5 +42,30 @@ class InvertTree {
         return root;
         
        
+    }
+
+    public TreeNode invertTree2(TreeNode root) {
+        // BFS
+        if (root == null) {
+            return null;
+        }
+
+        final Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+
+        while(!queue.isEmpty()) {
+            final TreeNode node = queue.poll();
+            final TreeNode left = node.left;
+            node.left = node.right;
+            node.right = left;
+
+            if(node.left != null) {
+                queue.offer(node.left);
+            }
+            if(node.right != null) {
+                queue.offer(node.right);
+            }
+        }
+        return root;
     }
 }
