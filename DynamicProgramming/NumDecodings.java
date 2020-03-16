@@ -28,6 +28,36 @@ Explanation: It could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).
 
 public class NumDecodings {
     public int numDecodings(String s) {
+        if (s.isEmpty() || s.charAt(0) - '0' == 0) return 0;
+        int[] memo = new int[s.length()+1];
+        memo[0] = 1;
+        memo[1] = 1;
+        
+        for(int i=1; i<s.length();i++){
+            int curr = s.charAt(i) - '0';
+            int prev = s.charAt(i-1) - '0';
+            
+            // can't make progress, return 0
+            if (prev == 0 && curr == 0 || (curr == 0 && (prev * 10 + curr > 26))){
+                return 0;
+            }
+            
+            else if(prev == 0 || (prev*10 + curr)>26){
+                memo[i+1] = memo[i];
+            }
+            
+            else if (curr == 0){
+                memo[i+1] = memo[i-1];
+            }
+            else{
+                memo[i+1] = memo[i-1]+memo[i];
+            }
+        }  
+        return memo[memo.length-1];                
+
+
+    }    
+    public int numDecodings2(String s) {
         if(s == null || s.length() == 0) {
             return 0;
         }

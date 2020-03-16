@@ -20,7 +20,7 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 */
 
 class Solution {
-    // DP + memo
+    // Top down DP + memo
     public int rob(int[] nums) {
         int[] memo = new int[nums.length + 1];
         Arrays.fill(memo, -1);
@@ -34,6 +34,7 @@ class Solution {
         }
         return memo[i];
     }
+    
     
     
 }

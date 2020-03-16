@@ -23,23 +23,19 @@ Explanation: There are three ways to climb to the top.
 */
 
 class Solution {
-    public int climbStairs(int i, int n, int[] memo){
-        if(i > n){
-            return 0;
+    public int climbStairs(int n, int[] memo) {
+        if (n == 0 || n == 1 ) return 1;
+        if(memo[n]<=0) {
+            memo[n] = climbStairs(n-1, memo)+climbStairs(n-2, memo);
         }
-        if(i == n){
-            return 1;
-        }
-        if (memo[i] > 0){
-            return memo[i];
-        }
-        memo[i] = climbStairs(i + 1, n, memo) + climbStairs(i + 2, n, memo);
-        return memo[i];
+        return memo[n];
     }
     
-    public int climbStairs(int n){
+    public int climbStairs(int n) {
         int[] memo = new int[n+1];
-        return climbStairs(0, n, memo);
+        memo[0] = 1;
+        memo[1] = 1;
+        return climbStairs(n, memo);
     }
 
     public int climbStairs2(int n) {
