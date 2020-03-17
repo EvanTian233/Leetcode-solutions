@@ -1,14 +1,42 @@
 # data_structure_notes
 LeetCode started since 2019-09-10
 
-## 2019-09-10
+## Array
 
-### Questions
-* #1 Two Sum
-* #11 Container with Most Water
-* #15 Three Sum
+## Hash Table
 
-### Learned
+## Linked List
+
+## String
+
+## Tree
+
+class Solution {
+    public boolean isSymmetric(TreeNode root) {
+        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        queue.add(root);
+        queue.add(root);
+        
+        while(!queue.isEmpty()){
+            TreeNode t1 = queue.poll();
+            TreeNode t2 = queue.poll();
+            if (t1 == null && t2 == null) continue;
+            if (t1 == null || t2 == null) return false;
+            if(t1.val != t2.val) return false;
+            queue.add(t1.left);
+            queue.add(t2.right);
+            queue.add(t1.right);
+            queue.add(t2.left);            
+        }
+        return true;
+    }
+        
+}
+
+
+## Recursion and Dynamic Programming
+
+## Sorting and Searching
 
 * Hash map:
   <br /> Its time complexity is O(1) to find complement since HashMap calculates, not searching, the index based on the key.
@@ -20,7 +48,7 @@ LeetCode started since 2019-09-10
     <br /> ans[0] = map.get(nums[i+1]); 		      
 
 * Array questions:
-  <br /> Try to use two pointers from the beginning and the bacl like lo and hi.
+  <br /> Try to use two pointers from the beginning and the back like lo and hi.
 
 ## 2019-09-11
 
