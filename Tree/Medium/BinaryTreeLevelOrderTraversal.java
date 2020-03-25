@@ -25,6 +25,7 @@ return its level order traversal as:
 class LevelOrder {
     public List<List<Integer>> levelOrder(TreeNode root) {
         // BFS
+
         List<List<Integer>> res = new ArrayList<>();
         if (root == null) return res;  
         Queue<TreeNode> queue = new LinkedList<>();
