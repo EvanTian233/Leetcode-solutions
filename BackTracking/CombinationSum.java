@@ -32,7 +32,6 @@ A solution set is:
 
 */
 
-
 class CombinationSum {
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         List<List<Integer>> list = new ArrayList<>();
