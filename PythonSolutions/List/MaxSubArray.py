@@ -24,3 +24,4 @@ class MaxSubArray:
             maxSum = max(maxSum, curSum)
 
         return maxSum
+        
