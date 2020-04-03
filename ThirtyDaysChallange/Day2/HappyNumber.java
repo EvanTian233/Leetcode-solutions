@@ -18,8 +18,6 @@ Explanation:
 
 */
 
-
-
 class HappyNumber {
     public boolean isHappy(int n) {
         Set<Integer> seen = new HashSet<Integer>();

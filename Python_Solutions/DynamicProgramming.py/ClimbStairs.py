@@ -68,7 +68,7 @@ class ClimbStairs2:
         
     def helper(self, n, dic):
         if dic[n] < 0:
-            dic[n] = helper(n-1, dic)+helper(n-2, dic)
+            dic[n] = self.helper(n-1, dic)+self.helper(n-2, dic)
         return dic[n]
         
     # Top down + memorization (dictionary)  
@@ -77,5 +77,5 @@ class ClimbStairs2:
         
     def climbStairs(self, n):
         if n not in self.dic:
-            self.dic[n] = climbStairs(n-1) + climbStairs(n-2)
+            self.dic[n] = self.climbStairs(n-1) + self.climbStairs(n-2)
         return self.dic[n]
