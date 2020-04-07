@@ -27,6 +27,7 @@ Every cost[i] will be an integer in the range [0, 999].
 
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
+        // Bottom up
         if (cost.length == 0) return 0;
         if (cost.length == 1) return cost[0];
         if (cost.length == 2) return Math.min(cost[0],cost[1]);
