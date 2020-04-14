@@ -127,4 +127,11 @@ IndexError: pop from an empty deque
 >>> d.extendleft('abc')              # extendleft() reverses the input order
 >>> d
 deque(['c', 'b', 'a'])
+
+Work with string
+In [44]: import collections
+In [45]: z = "string"
+In [46]: y = collections.deque(z)
+In [47]: ''.join(y) 
+Out[47]: 'string'
 """
