@@ -25,6 +25,7 @@ Output: 3
 
 """
 
+
 class NumOfIslands:
     def numIslands(self, grid: List[List[str]]) -> int:
         if not grid:
