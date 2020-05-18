@@ -92,3 +92,64 @@ a, b, *c, d= (1, 2, 3, 4, 5)
 
 # get the last one
 a, b, *_, d= (1, 2, 3, 4, 5, 6, 7)
+
+
+""" 7. Setattr() & Getattr() """
+class Person():
+    pass
+
+person = Person()
+
+first_key = 'first'
+first_value = 'Evan'
+
+##### After
+setattr(person, 'first', 'Evan')
+#setattr(person, first_key, first_value)
+print(person.first)
+
+first = getattr(person, first_key)
+print(first)
+
+
+person_info = {'first': 'Corney', 'last': 'Schafer'}
+
+for key, value in person_info.items():
+    setattr(person, key, value)
+
+for key in person_info.keys():
+    print(getattr(person, key))
+
+
+
+""" 8. GetPass """
+
+# Hide input password
+from getpass import getpass
+
+username = input('Username: ')
+password = getpass('Password: ')
+
+print('Logging In...')
+
+
+""" 9. Python dash m """
+# In command line
+# Creating vertual environment
+# python -m venv my_env
+
+# Running the module after '-m'
+# The module that not existing in current dir
+# Search in sys.path for that file and run it
+
+
+
+""" 10. Help / Dir """
+
+# Find more information
+
+import smtpd
+help(smtpd)
+
+from datetime import datetime
+dir(datetime)
